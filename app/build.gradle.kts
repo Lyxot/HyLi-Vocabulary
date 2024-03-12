@@ -200,11 +200,13 @@ dependencies {
     implementation("androidx.startup:startup-runtime:1.1.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
 
-    api("androidx.datastore:datastore:1.1.0-beta02")
-
     implementation("com.alibaba.fastjson2:fastjson2-kotlin:2.0.47")
     implementation("com.github.getActivity:XXPermissions:18.6")
     implementation("com.github.1552980358:C2Pinyin:3.0.0")
+
+    val datastore_version = "1.1.0-beta02"
+    implementation("androidx.datastore:datastore:$datastore_version")
+    implementation("androidx.datastore:datastore-preferences:$datastore_version")
 
     val protobuf_version = "3.25.3"
     implementation("com.google.protobuf:protobuf-java:$protobuf_version")
