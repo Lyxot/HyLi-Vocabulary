@@ -1,0 +1,28 @@
+syntax = "proto3";
+package xyz.hyli.vocabulary.proto;
+
+option java_package = "xyz.hyli.vocabulary.proto";
+option java_outer_classname = "WordProto";
+option optimize_for = LITE_RUNTIME;
+
+// saved in the file id.pb.
+message WordList {
+  repeated Word words = 1;
+}
+
+message Word {
+  int32 id = 1;
+  string word = 2;
+  string pronunciation = 3;
+  repeated Meaning meanings = 4;
+  int32 timestamp = 5;
+  bool deleted = 6;
+
+}
+
+message Meaning {
+  int32 id = 1;
+  string partOfSpeech = 2;
+  repeated string meaning = 3;
+  bool deleted = 4;
+}

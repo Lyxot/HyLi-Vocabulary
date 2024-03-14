@@ -23,6 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.pages.EditorPage"
+            android:exported="true"
+            android:theme="@style/Theme.HyLiVocabulary" />
     </application>
 
 </manifest>

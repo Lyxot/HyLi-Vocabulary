@@ -1,0 +1,17 @@
+syntax = "proto3";
+package xyz.hyli.vocabulary.proto;
+
+option java_package = "xyz.hyli.vocabulary.proto";
+option java_outer_classname = "WordListProto";
+option optimize_for = LITE_RUNTIME;
+
+message InfoList {
+  repeated Info wordListInfo = 1;
+}
+
+message Info {
+  int32 id = 1;
+  string name = 2;
+  int32 timestamp = 3;
+  bool deleted = 4;
+}
